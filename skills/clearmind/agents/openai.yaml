@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClearMind"
+  short_description: "Thoughtful programming with verified outcomes"
+  default_prompt: "Use $clearmind to assess sub-agent delegation first, delegate useful separate domains, and implement this change in short verified cycles while preserving product coherence and avoiding unnecessary UI copy."
