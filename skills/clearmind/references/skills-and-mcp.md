@@ -4,11 +4,16 @@
 
 At each task start, inspect the host-exposed skill catalog and MCP server/tool
 inventory before settling on a tool path. Use the host's discovery or search
-interface where it exists; for a large catalog, search by the task's needs rather
-than reading every entry. If the host only supplies a fixed list, inspect that
-list. If neither is available, use the capabilities actually exposed and state
-the discovery limit only when it affects the outcome. Do not assume that a
-favorite skill or familiar server is present.
+interface where it exists; for a large catalog, search by both the task domain
+and work type (such as UI, refactoring, or browser verification) rather than
+reading every entry. Search beyond the invoked general skill: a skill-authoring
+task may have a skill-creation specialist, and a UI refactor may have separate
+design and engineering specialists. If the host only supplies a fixed list,
+inspect that list. Keep track of which source you actually inspected for each
+category. A skill's presence in the prompt, a folder listing, or a generic
+"loaded a tool" event does not establish that you checked the host's full
+exposed catalog. If an inventory is unavailable, report that limit rather than
+silently substituting memory or assuming no relevant capability exists.
 
 Make a small decision for each material need: which capability fits, what it can
 access, whether its permissions and cost are appropriate, and what evidence it
@@ -41,15 +46,18 @@ equivalent tools where one already answered the question reliably. A local file
 tool may be best for a local source edit; an MCP connection may be best for an
 external design, issue, document, or service state. Neither wins by default.
 
-Announce the check and selected capabilities in the first available user-facing
-update before substantial work. Say what each selected skill or MCP tool will
-contribute; explicitly say when no MCP tool or additional skill fits. If the host
-cannot expose a full inventory, describe the scope actually checked. Keep the
-use/skip/fallback reasoning in internal notes or an existing plan; one sentence
-can suffice for a small task. Reconsider the choice when scope changes, a tool
-fails, or new evidence reveals a need, and update the user when the selected
-approach materially changes. Do not publish a full inventory or call every server
-merely to prove discovery happened.
+After inspecting both inventories, announce the result in the first available
+user-facing update before substantial work. Give skills and MCP separate clauses:
+name the inventory source, relevant candidates, selected names and their roles,
+and a brief reason for skipping plausible alternatives. If a category has no fit,
+say what task terms or categories you searched; if it could not be checked, say
+that instead. "Local files, tests, and
+browser tools are relevant" describes an implementation plan, not a skill/MCP
+inventory check. A browser MCP must be identified by its server/tool name if
+selected. Keep the detailed use/skip/fallback reasoning in internal notes or an
+existing plan. Reconsider the choice when scope changes, a tool fails, or new
+evidence reveals a need, and update the user when the selected approach materially
+changes. Do not publish every unrelated server or call one merely to prove discovery.
 
 ## Make tool use real
 

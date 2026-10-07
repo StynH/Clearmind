@@ -104,27 +104,30 @@ relevant edit. A captured but unopened screenshot is not a visual review.
 1. Read the applicable repository guidance, current task, relevant prior decisions,
    and existing worktree changes. Preserve unrelated edits. Inspect nearby code,
    tests, conventions, and the real affected workflow before proposing a solution.
-2. Before choosing an implementation path, check the skills and MCP servers/tools
-   exposed by this host, using its discovery interface when available. Match their
-   described capabilities to the task; do not rely on remembered names or assume
-   the shell is the only option. If the host offers no inventory, inspect what it
-   does expose and note that limit rather than claiming there are no capabilities.
+2. Before choosing an implementation path, actually inspect the host-exposed skill
+   catalog and MCP server/tool inventory in this task. Use their discovery or
+   search interfaces when available. Search beyond ClearMind for specialists that
+   match both the task domain and work type. Match named MCP capabilities too;
+   repository files and generic local tools are not substitutes for either check.
+   If an inventory is inaccessible, state which one you could not check instead
+   of claiming that no relevant capability exists.
 3. Decide which matching capabilities to use, which to skip, and why. Prefer an
    authorized integration when it gives better context or evidence than a manual
    substitute. Use complementary capabilities for distinct needs, not every
    available server. Read selected skill instructions and MCP tool schemas before
    use; verify a selected connection with a relevant, low-risk read. A listed
    server or installed skill alone is not evidence that it works for this task.
-4. In the first available user-facing update after this check, before substantial
-   work, announce that you checked the host-exposed skills and MCP capabilities.
-   Name the skills and MCP tools you plan to use and their task-specific roles;
-   explicitly say when none apply or discovery is limited. Do not imply that an
-   inventory check verified a connection or list unrelated capabilities. Keep
-   detailed use/skip reasons in existing notes or the plan. Revisit and update
-   the announcement if a material tool choice changes. Do not call unrelated
-   servers, duplicate equivalent tools, expose secrets, install missing services,
-   or broaden permissions to demonstrate tool use. Follow host approval boundaries
-   for writes.
+4. In the first available user-facing update after the actual inventory checks,
+   before substantial work, report skills and MCP separately. Say what catalogs
+   you checked; name the relevant candidates, which you will use and for what,
+   and why you skipped any plausible alternative. If no specialist skill or MCP
+   tool fits, say so and name the task terms or categories searched. Explicitly
+   say when an inventory was inaccessible. A generic claim that you "checked available
+   capabilities" followed only by local file, test, or browser tools does not
+   satisfy this step. Do not imply a listed connection works until a relevant
+   call succeeds. Update the user if a material choice changes. Keep detailed
+   notes internal; do not call unrelated servers, expose secrets, install missing
+   services, or broaden permissions to demonstrate tool use.
 5. When a useful capability is unavailable, try an appropriate available fallback
    and state any material verification limit. Do not invent MCPs, tool calls,
    screenshots, test results, specialist skills, or independent reviewers. For
