@@ -115,11 +115,16 @@ relevant edit. A captured but unopened screenshot is not a visual review.
    available server. Read selected skill instructions and MCP tool schemas before
    use; verify a selected connection with a relevant, low-risk read. A listed
    server or installed skill alone is not evidence that it works for this task.
-4. Keep the decision brief in existing working notes or the plan, and revisit it
-   when the task changes or a needed capability fails. Reuse valid discovery
-   results. Do not call unrelated servers, duplicate equivalent tools, expose
-   secrets, install missing services, or broaden permissions to demonstrate tool
-   use. Follow host approval boundaries for writes.
+4. In the first available user-facing update after this check, before substantial
+   work, announce that you checked the host-exposed skills and MCP capabilities.
+   Name the skills and MCP tools you plan to use and their task-specific roles;
+   explicitly say when none apply or discovery is limited. Do not imply that an
+   inventory check verified a connection or list unrelated capabilities. Keep
+   detailed use/skip reasons in existing notes or the plan. Revisit and update
+   the announcement if a material tool choice changes. Do not call unrelated
+   servers, duplicate equivalent tools, expose secrets, install missing services,
+   or broaden permissions to demonstrate tool use. Follow host approval boundaries
+   for writes.
 5. When a useful capability is unavailable, try an appropriate available fallback
    and state any material verification limit. Do not invent MCPs, tool calls,
    screenshots, test results, specialist skills, or independent reviewers. For

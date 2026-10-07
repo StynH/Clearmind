@@ -41,10 +41,15 @@ equivalent tools where one already answered the question reliably. A local file
 tool may be best for a local source edit; an MCP connection may be best for an
 external design, issue, document, or service state. Neither wins by default.
 
-Keep the use/skip/fallback decision in internal notes or an existing plan. It can
-be one sentence for a small task. Reconsider it when scope changes, a selected
-tool fails, or new evidence reveals a need. Do not create a public inventory or
-call every server merely to prove discovery happened.
+Announce the check and selected capabilities in the first available user-facing
+update before substantial work. Say what each selected skill or MCP tool will
+contribute; explicitly say when no MCP tool or additional skill fits. If the host
+cannot expose a full inventory, describe the scope actually checked. Keep the
+use/skip/fallback reasoning in internal notes or an existing plan; one sentence
+can suffice for a small task. Reconsider the choice when scope changes, a tool
+fails, or new evidence reveals a need, and update the user when the selected
+approach materially changes. Do not publish a full inventory or call every server
+merely to prove discovery happened.
 
 ## Make tool use real
 

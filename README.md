@@ -130,7 +130,7 @@ See the [sub-agent guide](skills/clearmind/references/subagent-orchestration.md)
 
 ## Other skills and MCP tools
 
-At each task start, ClearMind tells the agent to check the skills and MCP servers/tools its host exposes, then choose which capabilities fit the work. It should read selected skill instructions and tool schemas, verify selected connections through relevant, low-risk calls, and use complementary tools where each fills a distinct need. Unrelated servers and duplicate calls add nothing.
+At each task start, ClearMind tells the agent to check the skills and MCP servers/tools its host exposes, choose relevant capabilities, and announce what it checked and plans to use. It should read selected skill instructions and tool schemas, verify selected connections through relevant, low-risk calls, and use complementary tools where each fills a distinct need. Unrelated servers and duplicate calls add nothing.
 
 It does not install services or change permissions. When a capability is missing, the agent should use an available fallback and report any verification gap. Your repository rules and the host's approval requirements still apply. See [skills and MCP](skills/clearmind/references/skills-and-mcp.md).
 
