@@ -2,10 +2,21 @@
 
 ## Discover before defaulting to unaided work
 
-Inspect the skill metadata and tool capabilities exposed by the current host.
-Search a large catalog by the task's real needs. Do not assume that a favorite
-skill or a familiar MCP server is present. Read the relevant skill instructions
-and tool schema before use; names alone do not establish behavior or permissions.
+At each task start, inspect the host-exposed skill catalog and MCP server/tool
+inventory before settling on a tool path. Use the host's discovery or search
+interface where it exists; for a large catalog, search by the task's needs rather
+than reading every entry. If the host only supplies a fixed list, inspect that
+list. If neither is available, use the capabilities actually exposed and state
+the discovery limit only when it affects the outcome. Do not assume that a
+favorite skill or familiar server is present.
+
+Make a small decision for each material need: which capability fits, what it can
+access, whether its permissions and cost are appropriate, and what evidence it
+can provide. Choose a specialist skill when its method applies; read its
+instructions before governed work. Choose an MCP tool when it can reach the
+relevant source or perform a needed operation; read its schema before calling it.
+Use both when they serve different roles. A name or description alone does not
+establish behavior, access, or permission.
 
 Use multiple complementary specialist skills when they add distinct value.
 For example, a UI defect may benefit from repository conventions, systematic
@@ -24,9 +35,16 @@ Keep a small working capability map, not a user-facing inventory:
 | Challenge the patch | Review skill and, where available, a separate agent | Findings checked against the brief and evidence |
 
 The categories above are examples, not mandatory server names or dependencies.
-Use every relevant authorized capability that fills an evidence gap. Prefer a
-stronger existing integration to a weaker manual approximation. Do not use two
-equivalent tools where one already answered the question reliably.
+Select relevant authorized capabilities that fill distinct evidence gaps. Prefer
+a stronger existing integration to a weaker manual approximation. Do not use two
+equivalent tools where one already answered the question reliably. A local file
+tool may be best for a local source edit; an MCP connection may be best for an
+external design, issue, document, or service state. Neither wins by default.
+
+Keep the use/skip/fallback decision in internal notes or an existing plan. It can
+be one sentence for a small task. Reconsider it when scope changes, a selected
+tool fails, or new evidence reveals a need. Do not create a public inventory or
+call every server merely to prove discovery happened.
 
 ## Make tool use real
 

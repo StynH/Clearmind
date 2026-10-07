@@ -104,22 +104,26 @@ relevant edit. A captured but unopened screenshot is not a visual review.
 1. Read the applicable repository guidance, current task, relevant prior decisions,
    and existing worktree changes. Preserve unrelated edits. Inspect nearby code,
    tests, conventions, and the real affected workflow before proposing a solution.
-2. Discover the available skill catalog, relevant MCP tools, and real sub-agent
-   capabilities through the host's actual interfaces. Use all relevant, authorized
-   capabilities that materially improve this task, not just the easiest one. Load
-   specialist skills before the work they govern; use their procedures, rather than
-   merely naming them.
-3. Prefer capable existing integrations for repository context, official/versioned
-   documentation, design assets, browser interaction, diagnostics, tests, and
-   review. Make a relevant low-risk read to verify a selected integration actually
-   works. A configured server or successful installation is not proof of access.
-4. Keep discovery targeted and reuse valid results. Do not call unrelated servers,
-   duplicate equivalent tools, expose secrets, install missing services, or use
-   broad write permissions just to demonstrate tool use. Read-only access is the
-   default for investigation. Follow host approval boundaries for writes.
+2. Before choosing an implementation path, check the skills and MCP servers/tools
+   exposed by this host, using its discovery interface when available. Match their
+   described capabilities to the task; do not rely on remembered names or assume
+   the shell is the only option. If the host offers no inventory, inspect what it
+   does expose and note that limit rather than claiming there are no capabilities.
+3. Decide which matching capabilities to use, which to skip, and why. Prefer an
+   authorized integration when it gives better context or evidence than a manual
+   substitute. Use complementary capabilities for distinct needs, not every
+   available server. Read selected skill instructions and MCP tool schemas before
+   use; verify a selected connection with a relevant, low-risk read. A listed
+   server or installed skill alone is not evidence that it works for this task.
+4. Keep the decision brief in existing working notes or the plan, and revisit it
+   when the task changes or a needed capability fails. Reuse valid discovery
+   results. Do not call unrelated servers, duplicate equivalent tools, expose
+   secrets, install missing services, or broaden permissions to demonstrate tool
+   use. Follow host approval boundaries for writes.
 5. When a useful capability is unavailable, try an appropriate available fallback
-   and state the resulting verification limit. Do not invent MCPs, tool calls,
-   screenshots, test results, specialist skills, or independent reviewers.
+   and state any material verification limit. Do not invent MCPs, tool calls,
+   screenshots, test results, specialist skills, or independent reviewers. For
+   selection criteria and examples, read [Skills and MCP](references/skills-and-mcp.md).
 6. Resolve the startup delegation decision from this context. For suitable
    domains, choose owners and launch bounded assignments before doing their work
    yourself. Keep the decision in the existing plan or internal working notes.
