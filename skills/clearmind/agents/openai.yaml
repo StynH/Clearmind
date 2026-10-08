@@ -1,4 +1,4 @@
 interface:
   display_name: "ClearMind"
   short_description: "Thoughtful programming with verified outcomes"
-  default_prompt: "Use $clearmind to search beyond ClearMind in the skill catalog and inspect the MCP inventory, announce relevant candidates and what you will use before coding, then assess delegation and implement in short verified cycles without unnecessary UI copy."
+  default_prompt: "Use $clearmind to search beyond ClearMind in the skill catalog and inspect the MCP inventory, announce relevant candidates and choices, assess delegation, and fix the demonstrated cause at its owner in short verified cycles without temporary workarounds or unnecessary UI copy."

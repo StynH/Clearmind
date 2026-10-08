@@ -32,6 +32,46 @@ need and demonstrated fit, not the phrase “industry best practice”.
 YAGNI is not permission to omit required security, data integrity, accessibility,
 or current operational needs. Minimal means sufficient, not fragile.
 
+## Repair the cause at its owner
+
+For a defect, reproduce the failure and trace the inputs, state transitions,
+contracts, and dependencies until the failing mechanism and its owner are clear.
+State the causal explanation and supporting observations in working notes. A
+suspicious line, a plausible theory, or one successful attempt is insufficient.
+Use a discriminating check when competing explanations remain; investigate before
+editing rather than stacking speculative patches.
+
+Choose a repair that restores the violated contract or invariant at that owner.
+If a producer emits stale or invalid state, fix its ownership or ordering rather
+than teaching each consumer to compensate independently. Inspect all affected
+entry points and remove compensating code made obsolete by the repair. Keep
+unrelated cleanup out of scope. A small edit can repair the cause; a larger
+refactoring is justified only when necessary for the required behavior.
+
+Reject changes that make the symptom disappear while leaving the mechanism active:
+arbitrary sleeps to hide a race, automatic retries of an unsafe mutation, broad
+catches that return success, hard-coded exceptions, forced reloads, duplicate state,
+disabled validation, and a TODO promising the real fix later. Do not introduce a
+temporary workaround for a requested repair or silently weaken the requirement.
+If the owning system is inaccessible or a required contract cannot be changed,
+report the blocker and unresolved cause; do not claim completion through a local
+patch that conceals it.
+
+Evaluate mechanisms by their purpose and evidence. Cancellation or response
+ordering that enforces state ownership can be the actual fix for a race. Bounded
+backoff for a documented transient failure, idempotency for repeated requests,
+timeouts, and recovery controls can be durable parts of a correct contract. Their
+presence alone does not make a workaround, and a ban on all defensive handling
+would create new defects. Establish why the mechanism solves the demonstrated
+failure and preserves valid behavior.
+
+Verify the causal explanation as well as the visible result. Use a reproducing
+regression check that fails before the repair and passes afterward when feasible.
+Exercise the conditions that exposed the defect, relevant alternate entry points,
+and repeated or adverse execution. A happy-path pass, elapsed delay, suppressed
+error, or successful mock does not prove the underlying failure is gone. If the
+cause remains uncertain, continue investigation or report that gap.
+
 ## Refactor in controlled steps
 
 Distinguish changes that preserve observable behavior from changes that intentionally
@@ -40,10 +80,8 @@ survive. Perform a small structural change, rerun the affected checks, then make
 behavioral change. Keep the distinction clear in the diff or work sequence without
 requiring a commit per step.
 
-Fix causes, not presentation of symptoms. Do not silence failures with broad catches,
-null defaults, hidden retries, or arbitrary delays. Preserve actionable error
-information and follow the project's error contract. Avoid leaking secrets or
-internal diagnostics into user-visible messages.
+Preserve actionable error information and follow the project's error contract.
+Avoid leaking secrets or internal diagnostics into user-visible messages.
 
 ## Select relevant failure modes
 

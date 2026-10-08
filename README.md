@@ -103,6 +103,8 @@ For UI work, the agent should try the affected interaction in the running applic
 
 The engineering guidance favors small refactorings and sound existing conventions. New abstractions or dependencies need a current reason; unrelated cleanup stays out of the patch.
 
+For defects, the agent must establish the cause with evidence and repair the boundary that owns it. Arbitrary delays, suppressed errors, duplicate state, and temporary workarounds do not count as repairs when the underlying defect remains. It should verify the original failure and related paths; an inaccessible cause stays an explicit blocker.
+
 Implementation follows six steps:
 
 1. Define the outcome and acceptance checks, including earlier feedback.

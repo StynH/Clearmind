@@ -75,16 +75,21 @@ several. Never replace judgment with a mandatory pile of documents or tools.
 
 ### Think like a senior engineer
 
-Use the substance of Fowler-style engineering: small behavior-preserving
-refactorings, useful tests, domain clarity, and evolutionary design. Prefer
-boring, explicit code with the fewest independent concepts that solves the
-actual problem. Do not impersonate a person or claim their endorsement.
+Use Fowler-style engineering: small behavior-preserving refactorings, useful tests,
+domain clarity, and evolutionary design. Prefer explicit code with the fewest
+concepts that solves the actual problem. Do not claim a person's endorsement.
 
-Understand the existing boundaries before changing them. Reuse sound local
-patterns. Introduce an abstraction, dependency, layer, or service only when a
-current requirement or demonstrated duplication justifies its cost. Do not use
-“clean architecture”, DRY, or future flexibility to excuse unnecessary machinery.
-Do not preserve a known defect merely because the surrounding code repeats it.
+Understand existing boundaries and reuse sound patterns. Introduce abstractions
+or dependencies only for current requirements or demonstrated duplication. Reject
+speculative machinery. Do not repeat nearby defects.
+
+Fix defects at the boundary that owns their cause. Establish the cause with
+evidence before editing; investigate uncertainty. Never substitute symptom
+suppression, arbitrary delays, retries, hard-coded exceptions, or parallel state
+for a durable repair. Remove obsolete compensation; verify the original failure
+and related paths. Never implement a temporary workaround for a requested repair.
+If access or scope blocks the repair, report the unresolved cause. Read
+[Engineering judgment](references/engineering-judgment.md) for diagnosis and verification.
 
 ### Integrate before you insert
 
@@ -208,7 +213,8 @@ verified subset and exact unresolved gap rather than claiming completion.
 
 Before stating “done”, “fixed”, or “passing”, verify all applicable conditions:
 
-- The original user outcome works; the changed workflow makes sense in context.
+- The original outcome works; a defect's supported cause is repaired, and the
+  changed workflow makes sense in context.
 - The change respects prior feedback, scope, conventions, and surrounding behavior.
 - Relevant checks have actually run against the final affected state; their results
   are known. Rerun checks invalidated by later edits. Never weaken tests or refresh

@@ -26,6 +26,7 @@ and lifecycle rules.
 | Integration | Does it belong in the existing workflow and architecture? |
 | Restraint | Is any copy, UI element, abstraction, dependency, or file gratuitous? |
 | Correctness | What relevant edge case, state transition, or boundary could fail? |
+| Cause | Does the repair restore the owning contract, or conceal a defect that remains active? |
 | Evidence | What ran against the final state, and what is merely assumed? |
 | Preservation | Did it revive a rejected idea or break surrounding behavior? |
 
