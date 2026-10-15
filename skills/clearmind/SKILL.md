@@ -37,6 +37,14 @@ Use the smallest useful team. Keep tiny or inseparable tasks local after the che
 If delegation is unavailable or unsuitable, retain a brief reason in working notes;
 do not manufacture agents, a public checklist, or a team announcement.
 
+Pick each worker's model and reasoning effort for its assignment, not by default.
+Use the least expensive host-available option expected to pass the assignment's
+acceptance checks: lighter tiers for mechanical search, inventory, or fully
+specified edits; the most capable tier for ambiguous diagnosis, cross-domain
+design, or high-risk review. Count likely rework in the cost. Escalate after a
+capability failure instead of retrying at the same tier. Explicit user, repository,
+agent-definition, and host model rules take precedence.
+
 Before spawning, read [Sub-agent orchestration](references/subagent-orchestration.md).
 Give every worker the outcome, prior corrections, scope, current state, owned paths,
 shared contracts, required skills/tools, and evidence expectations. Verify what
@@ -251,7 +259,7 @@ invent a flaw just to look critical.
 | Any UI, visible copy, placement, or interaction change | [Product and interface](references/product-and-interface.md) |
 | Architecture, data flow, refactoring, or a nontrivial defect | [Engineering judgment](references/engineering-judgment.md) |
 | Skill composition, MCP discovery, or fallbacks | [Skills and MCP](references/skills-and-mcp.md) |
-| Planning a split, spawning workers, or integrating their output | [Sub-agent orchestration](references/subagent-orchestration.md) |
+| Planning a split, choosing worker models, spawning workers, or integrating output | [Sub-agent orchestration](references/subagent-orchestration.md) |
 | Final review, contested feedback, or independent reviewers | [Critical review](references/critical-review.md) |
 
 Use the optional [work record](assets/work-record.md) only when it reduces context

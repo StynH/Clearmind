@@ -128,6 +128,8 @@ Workers get relevant user feedback, owned files, shared contracts, and acceptanc
 
 Each writable area has one owner. The parent inspects returned work and tests the combined result. Separate passing tests do not establish integration. Workers need explicit authority for nested delegation.
 
+Workers do not automatically get the most expensive model. Where the host allows it, the parent picks the cheapest model and effort expected to pass each assignment's checks, counting likely rework. A file search can use a light model, while an ambiguous diagnosis or a security review gets the most capable one. A worker that falls short is moved up a tier instead of being retried unchanged. Explicit model choices from the user, repository, or host take precedence.
+
 See the [sub-agent guide](skills/clearmind/references/subagent-orchestration.md) for the full handoff and integration rules.
 
 ## Other skills and MCP tools

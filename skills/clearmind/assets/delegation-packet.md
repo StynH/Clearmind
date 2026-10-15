@@ -23,6 +23,7 @@ Shared contracts and their owners:
 Dependencies / prerequisites / integration order:
 Available context, relevant paths, design references, and evidence locations:
 Required specialist skills and relevant authorized tools:
+Model tier and reasoning effort, with the reason they fit this assignment:
 Execution limits, escalation conditions, and return checkpoint:
 Nested delegation: disabled unless explicitly authorized with a bounded budget.
 
