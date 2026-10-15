@@ -59,6 +59,43 @@ non-overlapping work, including the critical path, while workers run. Do not rep
 the delegated investigation in parallel or wait idly when other useful work remains.
 Focused inspection of returned evidence is still the parent's responsibility.
 
+## Match model and effort to each assignment
+
+Choose a model tier and reasoning effort for every assignment, using the host's
+actual selection parameters. Do not inherit the parent's model or reach for the
+most expensive option by habit. The goal is the lowest total cost for an accepted
+result: price per token, expected token volume, and the likely cost of rework,
+escalation, and parent review all count. A cheap worker that fails twice can cost
+more than a capable one that succeeds once.
+
+| Assignment | Usual fit |
+| --- | --- |
+| Locating files, inventories, log or trace scans, collecting reproduction output | Lightest fast tier, low effort |
+| Applying a fully specified edit or a mechanical, pattern-following change | Lightest tier that reliably follows instructions |
+| Bounded implementation or focused tests against a settled contract | Mid tier, moderate effort |
+| Ambiguous diagnosis, cross-domain design, concurrency, security, or data-loss risk | Most capable tier, higher effort |
+| Independent review of a high-risk patch | At least the capability the risk warrants, never chosen only for price |
+
+These are starting points, not a fixed roster. Raise the tier when the assignment
+needs judgment the brief cannot supply, when context is large and subtle, or when
+a mistake would be expensive to detect. Lower it when the work is narrow, the
+acceptance check is mechanical, and failure is cheap to observe. Keep a task local
+when spawning any worker would cost more than doing it.
+
+Escalate on evidence. When a return fails verification because the work exceeded
+the worker's capability (missed reasoning, ignored constraints, shallow analysis),
+reassign at a higher tier with the gap stated. Do not retry an unchanged brief at
+the same tier. When the failure came from a poor brief or missing access, fix that
+first instead of buying a larger model.
+
+Higher-priority rules decide first. Follow an explicit model choice from the user,
+repository guidance, or a predefined agent definition. Some hosts restrict which
+parameters an agent may set on its own judgment; obey those limits and leave the
+host default in place where selection is not permitted. Confirm that a model or
+effort option exists before using it; never invent identifiers. If the host offers
+no selection, note that the worker runs at the host default instead of claiming a
+choice was made.
+
 Nested delegation is off by default for an assigned worker. Each worker considers
 possible splits, but returns proposals to its parent unless the assignment explicitly
 authorizes descendants and supplies a bounded budget. Any authorized nesting must
